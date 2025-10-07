@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelWave | Početna</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between py-3 gap-3">
+      <div class="brand d-flex align-items-center gap-3">
+        <img src="logo.png" alt="TravelWave logo" class="brand-logo">
+        <div class="brand-copy">
+          <p class="brand-title mb-0" data-i18n-key="brand.name">TravelWave</p>
+          <p class="brand-tagline mb-0" data-i18n-key="brand.tagline">Vaš vodič kroz nezaboravna putovanja</p>
+        </div>
+      </div>
+      <div class="btn-group language-toggle" role="group" aria-label="Izbor jezika">
+        <button type="button" class="btn btn-outline-primary lang-btn active" data-lang="sr">SR</button>
+        <button type="button" class="btn btn-outline-primary lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg custom-navbar navbar-light">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-page-target="home" data-i18n-key="nav.home">Početna</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-i18n-key="nav.arrangements">Aranžmani</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="europe.html" data-page-target="europe" data-i18n-key="nav.europe">Evropa</a></li>
+                <li><a class="dropdown-item" href="leto2025.html" data-page-target="summer" data-i18n-key="nav.summer">Leto 2025</a></li>
+                <li><a class="dropdown-item" href="zima2025.html" data-page-target="winter" data-i18n-key="nav.winter">Zima 2025</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galerija.html" data-page-target="gallery" data-i18n-key="nav.gallery">Galerija</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mojnalog.html" data-page-target="account" data-i18n-key="nav.account">Moj nalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="onam.html" data-page-target="about" data-i18n-key="nav.about">O nama</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold" data-i18n-key="home.hero.title">Otkrijte svoju sledeću destinaciju sa TravelWave agencijom</h1>
+            <p class="lead" data-i18n-key="home.hero.subtitle">Specijalizovani smo za aranžmane širom sveta uz punu podršku našeg tima i proverene partnere.</p>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <a class="btn btn-primary btn-lg" href="leto2025.html" data-i18n-key="home.hero.ctaSummer">Pogledaj letnje aranžmane</a>
+              <a class="btn btn-outline-primary btn-lg" href="mojnalog.html" data-i18n-key="home.hero.ctaAccount">Prijavi se ili registruj nalog</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-card shadow-sm">
+              <h2 class="h4 mb-3" data-i18n-key="home.news.title">Aktuelno u agenciji</h2>
+              <ul class="list-unstyled mb-0">
+                <li class="hero-news-item">
+                  <h3 class="h6 mb-1" data-i18n-key="home.news.item1.title">Nova ponuda za porodično letovanje u Halkidikiju</h3>
+                  <p class="mb-0 small" data-i18n-key="home.news.item1.copy">Popusti do 15% za rezervacije do kraja maja, sa uključenim prevozom i dečijim animacionim programom.</p>
+                </li>
+                <li class="hero-news-item">
+                  <h3 class="h6 mb-1" data-i18n-key="home.news.item2.title">Upoznajte našeg novog turističkog vodiča Marka</h3>
+                  <p class="mb-0 small" data-i18n-key="home.news.item2.copy">Marko donosi iskustvo sa više od 120 realizovanih tura širom Evrope.</p>
+                </li>
+                <li class="hero-news-item">
+                  <h3 class="h6 mb-1" data-i18n-key="home.news.item3.title">Ekskluzivne city-break ponude za jesen 2025.</h3>
+                  <p class="mb-0 small" data-i18n-key="home.news.item3.copy">Rezervišite ranije i obezbedite direktan let, hotelski prevoz i obilazak uz lokalnog vodiča.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-container container py-5">
+      <h2 class="section-title mb-4" data-i18n-key="home.featured.title">Top izbor za naredni mesec</h2>
+      <div class="custom-card d-flex flex-column flex-md-row">
+        <div class="card-image">
+          <img src="grcka.avif" alt="Letovanje u Grčkoj" class="img-fluid">
+        </div>
+        <div class="card-text">
+          <h3 class="h4" data-i18n-key="home.featured.card1.title">Letovanje u Grčkoj</h3>
+          <p data-i18n-key="home.featured.card1.copy">Sedam noćenja u luksuznom hotelu na Sitoniji, polupansion i avio-prevoz uključeni u cenu.</p>
+          <p class="price" data-i18n-key="home.featured.card1.price">Cena: 499 €</p>
+        </div>
+      </div>
+      <div class="custom-card d-flex flex-column flex-md-row">
+        <div class="card-image">
+          <img src="turkey.jpg" alt="All inclusive Turska" class="img-fluid">
+        </div>
+        <div class="card-text">
+          <h3 class="h4" data-i18n-key="home.featured.card2.title">All inclusive Turska</h3>
+          <p data-i18n-key="home.featured.card2.copy">Deset noćenja u hotelu sa pet zvezdica u Alanji, kompletna all inclusive usluga i transfer od/do aerodroma.</p>
+          <p class="price" data-i18n-key="home.featured.card2.price">Cena: 799 €</p>
+        </div>
+      </div>
+      <div class="custom-card d-flex flex-column flex-md-row">
+        <div class="card-image">
+          <img src="egipat.jpg" alt="Egipat - Hurgada" class="img-fluid">
+        </div>
+        <div class="card-text">
+          <h3 class="h4" data-i18n-key="home.featured.card3.title">Egipat – Hurgada</h3>
+          <p data-i18n-key="home.featured.card3.copy">Sedam noćenja u hotelu sa privatnom plažom, polupansion i fakultativni izleti.</p>
+          <p class="price" data-i18n-key="home.featured.card3.price">Cena: 599 €</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="best-rated-section container pb-5">
+      <h2 class="section-title mb-4" data-i18n-key="home.rated.title">🏆 Najbolje ocenjeni aranžmani</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="small-card h-100">
+            <div class="small-card-body">
+              <h3 class="h5" data-i18n-key="home.rated.card1.title">Italija – Rim</h3>
+              <p class="rating" data-i18n-key="home.rated.card1.rating">Ocena: 4.7</p>
+              <p class="review mb-0" data-i18n-key="home.rated.card1.review">„Predivan aranžman, vodiči su bili fantastični!”</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="small-card h-100">
+            <div class="small-card-body">
+              <h3 class="h5" data-i18n-key="home.rated.card2.title">Crna Gora – Budva</h3>
+              <p class="rating" data-i18n-key="home.rated.card2.rating">Ocena: 4.5</p>
+              <p class="review mb-0" data-i18n-key="home.rated.card2.review">„Odličan smeštaj i prelepa plaža, sigurno se vraćam.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="small-card h-100">
+            <div class="small-card-body">
+              <h3 class="h5" data-i18n-key="home.rated.card3.title">Francuska – Pariz</h3>
+              <p class="rating" data-i18n-key="home.rated.card3.rating">Ocena: 5.0</p>
+              <p class="review mb-0" data-i18n-key="home.rated.card3.review">„Romantično iskustvo, hotel je bio na par minuta od Ajfelovog tornja!”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer text-center py-3">
+    <p class="mb-0" data-i18n-key="footer.copy">Copyright 2025, Mihajlo Đurović, Matija Leković,
+      Odsek za softversko inženjerstvo, Elektrotehnički fakultet Univerziteta u Beogradu</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jscript.js"></script>
+</body>
+</html>
