@@ -65,10 +65,29 @@
         </button>
       </div>
 
-      <div id="rezervacije-lista" class="row g-4"></div>
-      <div id="nema-rezervacija" class="text-center text-muted py-5">
-        <p class="mb-0" data-i18n-key="account.empty">Trenutno nemate rezervisanih aranžmana.</p>
-      </div>
+      <section class="mb-5">
+        <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3 mb-3">
+          <div>
+            <h2 class="h3 mb-1" data-i18n-key="account.upcomingTitle">Zakazane destinacije</h2>
+            <p class="text-muted mb-0" data-i18n-key="account.upcomingDescription">Aktivne rezervacije koje još nisu počele.</p>
+          </div>
+        </div>
+        <div id="rezervacije-lista" class="row g-4"></div>
+        <div id="nema-rezervacija" class="text-center text-muted py-5">
+          <p class="mb-0" data-i18n-key="account.empty">Trenutno nemate rezervisanih aranžmana.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="mb-3">
+          <h2 class="h3 mb-1" data-i18n-key="account.visitedTitle">Posećene destinacije</h2>
+          <p class="text-muted mb-0" data-i18n-key="account.visitedDescription">Aranžmani koji su završeni. Podelite utiske ocenom.</p>
+        </div>
+        <div id="posecene-lista" class="row g-4"></div>
+        <div id="nema-posecenih" class="text-center text-muted py-5">
+          <p class="mb-0" data-i18n-key="account.visitedEmpty">Još uvek nemate posećenih destinacija.</p>
+        </div>
+      </section>
     </div>
   </main>
 

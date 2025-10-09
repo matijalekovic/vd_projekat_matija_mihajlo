@@ -1,0 +1,226 @@
+{
+  "brand": {
+    "name": "TravelWave",
+    "tagline": "Vaš vodič kroz nezaboravna putovanja"
+  },
+  "nav": {
+    "home": "Početna",
+    "arrangements": "Aranžmani",
+    "europe": "Evropa",
+    "summer": "Leto 2025",
+    "winter": "Zima 2025",
+    "gallery": "Galerija",
+    "account": "Moj nalog",
+    "about": "O nama"
+  },
+  "footer": {
+    "copy": "Copyright 2025, Mihajlo Đurović, Matija Leković, Odsek za softversko inženjerstvo, Elektrotehnički fakultet Univerziteta u Beogradu"
+  },
+  "pageTitles": {
+    "home": "TravelWave | Početna",
+    "europe": "TravelWave | Evropa",
+    "summer": "TravelWave | Leto 2025",
+    "winter": "TravelWave | Zima 2025",
+    "gallery": "TravelWave | Galerija",
+    "account": "TravelWave | Moj nalog",
+    "about": "TravelWave | O nama"
+  },
+  "home": {
+    "hero": {
+      "title": "Otkrijte svoju sledeću destinaciju sa TravelWave agencijom",
+      "subtitle": "Specijalizovani smo za aranžmane širom sveta uz punu podršku našeg tima i proverene partnere.",
+      "ctaSummer": "Pogledaj letnje aranžmane",
+      "ctaAccount": "Prijavi se ili registruj nalog"
+    },
+    "news": {
+      "title": "Aktuelno u agenciji",
+      "item1": {
+        "title": "Nova ponuda za porodično letovanje u Halkidikiju",
+        "copy": "Popusti do 15% za rezervacije do kraja maja, sa uključenim prevozom i dečijim animacionim programom."
+      },
+      "item2": {
+        "title": "Upoznajte našeg novog turističkog vodiča Marka",
+        "copy": "Marko donosi iskustvo sa više od 120 realizovanih tura širom Evrope."
+      },
+      "item3": {
+        "title": "Ekskluzivne city-break ponude za jesen 2025.",
+        "copy": "Rezervišite ranije i obezbedite direktan let, hotelski prevoz i obilazak uz lokalnog vodiča."
+      }
+    },
+    "featured": {
+      "title": "Top izbor za naredni mesec",
+      "card1": {
+        "title": "Letovanje u Grčkoj",
+        "copy": "Sedam noćenja u luksuznom hotelu na Sitoniji, polupansion i avio-prevoz uključeni u cenu.",
+        "price": "Cena: 499 €"
+      },
+      "card2": {
+        "title": "All inclusive Turska",
+        "copy": "Deset noćenja u hotelu sa pet zvezdica u Alanji, kompletna all inclusive usluga i transfer od/do aerodroma.",
+        "price": "Cena: 799 €"
+      },
+      "card3": {
+        "title": "Egipat – Hurgada",
+        "copy": "Sedam noćenja u hotelu sa privatnom plažom, polupansion i fakultativni izleti.",
+        "price": "Cena: 599 €"
+      }
+    },
+    "rated": {
+      "title": "🏆 Najbolje ocenjeni aranžmani",
+      "card1": {
+        "title": "Italija – Rim",
+        "rating": "Ocena: 4.7",
+        "review": "„Predivan aranžman, vodiči su bili fantastični!”"
+      },
+      "card2": {
+        "title": "Crna Gora – Budva",
+        "rating": "Ocena: 4.5",
+        "review": "„Odličan smeštaj i prelepa plaža, sigurno se vraćam.”"
+      },
+      "card3": {
+        "title": "Francuska – Pariz",
+        "rating": "Ocena: 5.0",
+        "review": "„Romantično iskustvo, hotel je bio na par minuta od Ajfelovog tornja!”"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Foto i video galerija",
+    "videoTitle": "Video zapisi sa putovanja",
+    "video1": {
+      "caption": "Santorini iz vazduha – pogledajte kako izgleda najpopularnije ostrvo u Grčkoj."
+    },
+    "video2": {
+      "caption": "Zimska avantura na Alpima – skijanje, spa i nezaboravne staze."
+    },
+    "photoTitle": "Fotografije naših aranžmana"
+  },
+  "arrangements": {
+    "searchPlaceholder": "Pretraži aranžman po nazivu...",
+    "sortAsc": "Sortiraj A-Z",
+    "sortDesc": "Sortiraj Z-A",
+    "reserve": "Rezerviši"
+  },
+  "europe": {
+    "title": "Evropske destinacije",
+    "subtitle": "Pažljivo biramo gradove i ture koje kombinuju kulturu, gastronomiju i jedinstvene doživljaje.",
+    "badge": "City-break i višednevni aranžmani",
+    "prague": {
+      "title": "Prag",
+      "copy": "Tri noćenja u centru Praga, doručak uključen i licencirani vodič na srpskom jeziku.",
+      "price": "Cena: 299 €"
+    },
+    "vienna": {
+      "title": "Beč",
+      "copy": "Dva noćenja, obilazak znamenitosti i autobuski prevoz iz Beograda uz lokalnog vodiča.",
+      "price": "Cena: 249 €"
+    },
+    "budapest": {
+      "title": "Budimpešta",
+      "copy": "Vikend aranžman sa krstarenjem Dunavom i hotelom sa četiri zvezdice u centru grada.",
+      "price": "Cena: 199 €"
+    }
+  },
+  "summer": {
+    "title": "Letnji aranžmani 2025",
+    "subtitle": "Prepustite se suncu, toplom moru i avanturama koje smo pripremili za predstojeću sezonu.",
+    "badge": "All inclusive ponude i apartmani",
+    "budva": {
+      "title": "Budva",
+      "copy": "Sedam noćenja u hotelu sa tri zvezdice, polupansion i organizovan prevoz autobusom.",
+      "price": "Cena: 399 €"
+    },
+    "halkidiki": {
+      "title": "Halkidiki",
+      "copy": "Deset noćenja u apartmanskom smeštaju, sopstveni prevoz i popust za iznamljivanje čamca.",
+      "price": "Cena: 299 €"
+    },
+    "hurghada": {
+      "title": "Hurgada",
+      "copy": "All inclusive aranžman, sedam noćenja i direktan let iz Beograda sa uključenim transferom.",
+      "price": "Cena: 699 €"
+    }
+  },
+  "winter": {
+    "title": "Zimski aranžmani 2025",
+    "subtitle": "Ski pass, wellness i avanture u snegu – pažljivo kreirani paketi za ljubitelje zime.",
+    "badge": "Planine i termalni centri",
+    "kopaonik": {
+      "title": "Kopaonik",
+      "copy": "Pet noćenja u planinskom hotelu sa spa centrom i ski pass-om uključenim u cenu.",
+      "price": "Cena: 499 €"
+    },
+    "zlatibor": {
+      "title": "Zlatibor",
+      "copy": "Četiri noćenja u apartmanskom smeštaju sa wellness centrom i panoramskom žičarom.",
+      "price": "Cena: 299 €"
+    },
+    "tara": {
+      "title": "Tara",
+      "copy": "Šest noćenja sa autobuskim prevozom iz Beograda i organizovanim zimskim aktivnostima.",
+      "price": "Cena: 199 €"
+    }
+  },
+  "account": {
+    "title": "Moje rezervacije",
+    "subtitle": "Ovde pregledate, potvrđujete i otkazujete aranžmane koje ste sačuvali.",
+    "clearAll": "Obriši sve rezervacije",
+    "clearConfirm": "Da li ste sigurni da želite da obrišete sve rezervacije?",
+    "empty": "Trenutno nemate rezervisanih aranžmana.",
+    "priceLabel": "Cena:",
+    "cancel": "Otkaži rezervaciju",
+    "upcomingTitle": "Zakazane destinacije",
+    "upcomingDescription": "Aktivne rezervacije koje još nisu počele.",
+    "startLabel": "Datum polaska:",
+    "daysRemaining": "Dana do polaska:",
+    "cancelUntil": "Otkazivanje moguće do",
+    "cancelUnavailable": "Otkazivanje više nije moguće jer je preostalo manje od 5 dana do polaska.",
+    "unknownStart": "Datum polaska nije definisan. Otkazivanje je uvek dostupno.",
+    "visitedTitle": "Posećene destinacije",
+    "visitedDescription": "Aranžmani koji su završeni. Podelite utiske ocenom.",
+    "visitedEmpty": "Još uvek nemate posećenih destinacija.",
+    "ratingPrompt": "Podelite utisak ocenom (1-5).",
+    "ratingLabel": "Vaša ocena:",
+    "ratingPlaceholder": "Izaberite ocenu",
+    "saveRating": "Sačuvaj ocenu",
+    "ratingSaved": "Ocena sačuvana. Hvala!",
+    "currentRating": "Trenutna ocena:",
+    "noRating": "Još niste ostavili ocenu.",
+    "ratingRequired": "Molimo izaberite ocenu pre čuvanja."
+  },
+  "about": {
+    "title": "Upoznajte TravelWave tim",
+    "subtitle": "Više od jedne decenije kreiramo putovanja po meri – od avanturističkih tura do luksuznih odmora.",
+    "mission": {
+      "title": "Naša misija",
+      "copy": "Verujemo da je svako putovanje prilika da se nauči nešto novo. Zato svaki aranžman gradimo oko autentičnih iskustava i lokalnih partnera."
+    },
+    "values": {
+      "title": "Naše vrednosti",
+      "copy": "Transparentnost, odgovorno putovanje i sigurnost putnika su temelji našeg svakodnevnog rada."
+    },
+    "awards": {
+      "title": "Nagrade",
+      "item1": "Najbolja agencija jugoistočne Evrope 2021.",
+      "item2": "Priznanje za kvalitet usluge 2022.",
+      "item3": "Top izbor putnika 2023."
+    },
+    "team": {
+      "title": "Naš tim",
+      "copy": "Sastavljeni smo od licenciranih turističkih vodiča, stručnjaka za destinacije i savetnika koji su obišli preko 60 zemalja. Svaki član tima poseduje sertifikate za pružanje prve pomoći i specijalizovane obuke za rad sa grupama."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "phoneLabel": "Telefon:",
+      "emailLabel": "E-pošta:",
+      "officeLabel": "Radno vreme:",
+      "officeHours": "Radnim danima 09-18h, subotom 10-14h."
+    },
+    "reasons": {
+      "title": "Zašto izabrati TravelWave?",
+      "item1": "24/7 podrška putnicima i lokalni asistenti na destinaciji.",
+      "item2": "Fleksibilne opcije plaćanja i mogućnost rate bez kamate.",
+      "item3": "Ekskluzivni popusti zahvaljujući partnerstvu sa 150 hotela."
+    }
+  }
+}
