@@ -455,6 +455,12 @@ const translations = {
 
 let currentLanguage = 'sr';
 
+/**
+ * Resolves a translation key for the requested language, falling back to Serbian when needed.
+ * @param {string} key Dot-separated translation path (e.g. `home.hero.title`).
+ * @param {string} [lang=currentLanguage] Language code to use when looking up the key.
+ * @returns {string|undefined} Matching translation string, or undefined if nothing is found.
+ */
 function translateKey(key, lang = currentLanguage) {
   const result = key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), translations[lang]);
   if (result !== undefined) {
@@ -466,6 +472,10 @@ function translateKey(key, lang = currentLanguage) {
   return undefined;
 }
 
+/**
+ * Updates text or attributes on elements that declare `data-i18n-key` according to the active language.
+ * @param {string} lang Language code that was just selected.
+ */
 function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n-key]').forEach(element => {
     const key = element.getAttribute('data-i18n-key');
@@ -481,6 +491,10 @@ function applyTranslations(lang) {
   });
 }
 
+/**
+ * Synchronises the page `<title>` with the current route and UI language.
+ * @param {string} lang Active language code.
+ */
 function updateDocumentTitle(lang) {
   const pageKey = document.body.dataset.page || 'home';
   const title = translateKey(`pageTitles.${pageKey}`, lang);
@@ -489,6 +503,10 @@ function updateDocumentTitle(lang) {
   }
 }
 
+/**
+ * Marks the language toggle buttons so the active language is visually highlighted.
+ * @param {string} lang Active language code.
+ */
 function syncLanguageToggle(lang) {
   document.querySelectorAll('.lang-btn').forEach(button => {
     const isActive = button.dataset.lang === lang;
@@ -496,6 +514,9 @@ function syncLanguageToggle(lang) {
   });
 }
 
+/**
+ * Highlights the current page in the navigation menu based on the `data-page` attribute on `<body>`.
+ */
 function highlightNavigation() {
   const pageKey = document.body.dataset.page;
   if (!pageKey) return;
@@ -505,6 +526,11 @@ function highlightNavigation() {
   });
 }
 
+/**
+ * Applies a new UI language, optionally persisting the choice, and refreshes dependent UI state.
+ * @param {string} lang Requested language code.
+ * @param {boolean} [persist=true] Whether to save the selection to `localStorage`.
+ */
 function setLanguage(lang, persist = true) {
   if (!translations[lang]) {
     lang = 'sr';
@@ -524,12 +550,19 @@ function setLanguage(lang, persist = true) {
   }
 }
 
+/**
+ * Initialises the UI language based on the saved preference, defaulting to Serbian.
+ */
 function initLanguage() {
   const stored = localStorage.getItem('siteLang');
   const initialLang = stored && translations[stored] ? stored : 'sr';
   setLanguage(initialLang, false);
 }
 
+/**
+ * Sorts destination cards alphabetically in ascending or descending order.
+ * @param {'asc'|'desc'} order Determines the sort direction.
+ */
 function sortCards(order) {
   const container = document.getElementById('destinacije-cards');
   if (!container) return;
@@ -544,6 +577,10 @@ function sortCards(order) {
   cards.forEach(card => container.appendChild(card));
 }
 
+/**
+ * Filters destination cards by matching the search term against the card title.
+ * The search input and card grid are expected to exist on destinations pages.
+ */
 function filterCards() {
   const input = document.getElementById('pretraga');
   const container = document.getElementById('destinacije-cards');
@@ -555,8 +592,15 @@ function filterCards() {
   });
 }
 
+/**
+ * Number of milliseconds in a single day, used when calculating date differences.
+ */
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
 
+/**
+ * Loads reservations from `localStorage`, returning an empty array on failure or malformed data.
+ * @returns {Array<object>} Parsed reservation records.
+ */
 function safeParseReservations() {
   try {
     const parsed = JSON.parse(localStorage.getItem('rezervacije') || '[]');
@@ -567,10 +611,19 @@ function safeParseReservations() {
   }
 }
 
+/**
+ * Serialises the reservations array back to `localStorage`.
+ * @param {Array<object>} reservations Reservations to persist.
+ */
 function persistReservations(reservations) {
   localStorage.setItem('rezervacije', JSON.stringify(reservations));
 }
 
+/**
+ * Converts an arbitrary date-like value to the canonical YYYY-MM-DD string used in storage.
+ * @param {unknown} value Any value that might represent a date.
+ * @returns {string|undefined} Normalised date string or undefined for invalid inputs.
+ */
 function normalizeDateString(value) {
   if (!value) {
     return undefined;
@@ -588,6 +641,11 @@ function normalizeDateString(value) {
   return `${year}-${month}-${day}`;
 }
 
+/**
+ * Attempts to convert a stored date value into a `Date` instance.
+ * @param {unknown} value Value read from storage.
+ * @returns {Date|null} `Date` object when parsing succeeds, otherwise null.
+ */
 function parseStoredDate(value) {
   if (!value) {
     return null;
@@ -600,6 +658,11 @@ function parseStoredDate(value) {
   return Number.isNaN(parsed.valueOf()) ? null : parsed;
 }
 
+/**
+ * Ensures each reservation object has required fields and sane values.
+ * @param {Array<object>} reservations Reservations read from storage.
+ * @returns {boolean} True if the input array was mutated and should be re-saved.
+ */
 function ensureReservationDefaults(reservations) {
   const timestampSeed = Date.now();
   let shouldPersist = false;
@@ -635,6 +698,11 @@ function ensureReservationDefaults(reservations) {
   return shouldPersist;
 }
 
+/**
+ * Resolves a value that may be localised by picking the best match for the active language.
+ * @param {object|string} value Either a plain string or an object of translations.
+ * @returns {string|undefined} String for the current language, if available.
+ */
 function resolveLocalizedValue(value) {
   if (typeof value === 'object' && value !== null) {
     return value[currentLanguage] || value.sr || Object.values(value)[0];
@@ -642,6 +710,12 @@ function resolveLocalizedValue(value) {
   return value;
 }
 
+/**
+ * Formats a `Date` instance into a language-specific readable string.
+ * @param {Date} date Date to format.
+ * @param {string} [lang=currentLanguage] Language code that determines the locale.
+ * @returns {string} Formatted date or an empty string if formatting fails.
+ */
 function formatLocalizedDate(date, lang = currentLanguage) {
   if (!(date instanceof Date) || Number.isNaN(date.valueOf())) {
     return '';
@@ -655,6 +729,9 @@ function formatLocalizedDate(date, lang = currentLanguage) {
   }
 }
 
+/**
+ * Builds and renders the upcoming and visited reservation lists, wiring up their event handlers.
+ */
 function prikaziRezervacije() {
   const upcomingContainer = document.getElementById('rezervacije-lista');
   const upcomingEmptyState = document.getElementById('nema-rezervacija');
@@ -852,6 +929,11 @@ function prikaziRezervacije() {
   }
 }
 
+/**
+ * Persists a rating for a reservation and recalculates its normalised value.
+ * @param {string} reservationId Identifier of the reservation being updated.
+ * @param {number} ratingValue Raw rating submitted by the user.
+ */
 function sacuvajOcenu(reservationId, ratingValue) {
   const reservations = safeParseReservations();
   ensureReservationDefaults(reservations);
@@ -863,6 +945,10 @@ function sacuvajOcenu(reservationId, ratingValue) {
   persistReservations(reservations);
 }
 
+/**
+ * Removes a reservation when cancellation is still allowed, otherwise alerts the user.
+ * @param {string} reservationId Identifier of the reservation to cancel.
+ */
 function otkaziRezervaciju(reservationId) {
   const reservations = safeParseReservations();
   const index = reservations.findIndex(reservation => reservation && reservation.id === reservationId);
@@ -886,6 +972,9 @@ function otkaziRezervaciju(reservationId) {
   prikaziRezervacije();
 }
 
+/**
+ * Clears all saved reservations after confirming with the user.
+ */
 function clearReservations() {
   const message = translateKey('account.clearConfirm') || 'Da li ste sigurni?';
   if (!window.confirm(message)) {
@@ -895,6 +984,15 @@ function clearReservations() {
   prikaziRezervacije();
 }
 
+/**
+ * Creates a new reservation entry, stores it, and redirects the user to the account page.
+ * @param {string} srNaziv Serbian title of the arrangement.
+ * @param {string} enNaziv English title of the arrangement.
+ * @param {string} srOpis Serbian description.
+ * @param {string} enOpis English description.
+ * @param {string} cena Price label to display.
+ * @param {string|Date} startDate Desired start date, if provided.
+ */
 function rezervisiAranzman(srNaziv, enNaziv, srOpis, enOpis, cena, startDate) {
   const reservations = safeParseReservations();
   const normalizedDate = normalizeDateString(startDate) || null;
